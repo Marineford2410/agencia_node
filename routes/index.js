@@ -3,11 +3,13 @@ import express from 'express';
 const router = express.Router();
 
 router.get('/', (request, response) => {
-   response.send('Inicio');
+   response.render('inicio');
 });
 
 router.get('/nosotros', (request, response) => {
-   response.render('nosotros');
+   const viajes = 'Viaje a Alemania';
+
+   response.render('nosotros', { viajes });
 });
 
 export default router;
