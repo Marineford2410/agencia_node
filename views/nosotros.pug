@@ -1,4 +1,32 @@
 extends ./layout/index
 
 block contenido
-   p Nosotros
+   main.container.mt-5  
+      .row
+         .col-md-5
+            img(src="img/nosotros.jpg", alt="Nosotros", class="img-fluid") 
+         .col-md-7 
+            h1=pagina
+            blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia eu neque vitae luctus. Vestibulum sed facilisis sem, a placerat sapien. Mauris in consectetur eros, ac iaculis elit. Aliquam efficitur porttitor nulla ac hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae gravida odio, ut pharetra odio.
+
+            p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Proin tincidunt, ex eget vehicula feugiat, diam magna efficitur turpis, eget faucibus nulla nulla a est. Sed mattis tellus sed lorem fringilla, vitae egestas leo pulvinar. Mauris lobortis sed nulla sed sagittis. 
+
+            p Nam urna lectus, molestie interdum viverra ut, congue sed lorem. In tristique luctus ligula a rhoncus. Integer et elementum quam. Phasellus consequat erat nec sapien sollicitudin condimentum et et metus. Donec tincidunt massa enim, ut interdum odio porttitor vel. Sed rutrum ex sed arcu porttitor, in dictum lectus cursus. 
+
+   .listado-iconos 
+      .container.md-5.py-5.text-center 
+         .row 
+            .col-md-4 
+               img(src="img/icono_seguridad.svg", alt="Seguridad", class="img-fluid mb-4")
+               h2.mb-4 Seguridad
+               p Donec tincidunt massa enim, ut interdum odio porttitor vel. Sed rutrum ex sed arcu porttitor, in dictum lectus cursus. 
+         
+            .col-md-4 
+               img(src="img/icono_destinos.svg", alt="Destinos", class="img-fluid mb-4")
+               h2.mb-4 Mejores Destinos
+               p Donec tincidunt massa enim, ut interdum odio porttitor vel. Sed rutrum ex sed arcu porttitor, in dictum lectus cursus. 
+
+            .col-md-4 
+               img(src="img/icono_precio.svg", alt="Precio", class="img-fluid mb-4")
+               h2.mb-4 Los Mejores Precio
+               p Donec tincidunt massa enim, ut interdum odio porttitor vel. Sed rutrum ex sed arcu porttitor, in dictum lectus cursus. 

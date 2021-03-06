@@ -3,13 +3,27 @@ import express from 'express';
 const router = express.Router();
 
 router.get('/', (request, response) => {
-   response.render('inicio');
+   response.render('inicio', {
+      pagina : 'Inicio'
+   });
 });
 
 router.get('/nosotros', (request, response) => {
-   const viajes = 'Viaje a Alemania';
+   response.render('nosotros', { 
+      pagina : 'Nosotros'
+   });
+});
 
-   response.render('nosotros', { viajes });
+router.get('/viajes', (request, response) => {
+   response.render('viajes', { 
+      pagina : 'Viajes'
+   });
+});
+
+router.get('/testimoniales', (request, response) => {
+   response.render('testimoniales', { 
+      pagina : 'Testimoniales'
+   });
 });
 
 export default router;
