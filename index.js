@@ -12,12 +12,16 @@ db.authenticate()
 const port = process.env.PORT || 4000;    // Definicion del puerto
 
 app.set('view engine', 'pug');            // Habilitando PUG
+
 app.use( (request, response, next) => {
    const year = new Date();
    response.locals.actualYear = year.getFullYear();
    response.locals.nombreSitio = 'Agencia de Viajes';
    next();
 });
+
+app.use(express.urlencoded({ extended: true }));   // Agregar body parser para leer los datos del formulario
+
 app.use(express.static('public'));        // Definir la carpeta publica
 app.use('/', router);                     // Estableciendo rutas
 
